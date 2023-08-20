@@ -32,8 +32,9 @@ void PrintMatrix(int[,] matrix)
             Console.Write($"{matrix[i, j], +    5}");
 
         }
+        Console.WriteLine("| ");
     }
-    Console.WriteLine("| ");
+    
 }
 
 
