@@ -39,15 +39,17 @@ void PrintMatrix(int[,] matrix)
 int SumElemDig(int[,] matrix)
 {
     int sum = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    int size = matrix.GetLength(0);
+   // if(size > matrix.GetLength(1)) size = matrix.GetLength(1);
+    for (int i =0; i < matrix.GetLength(0) && i< matrix.GetLength(1); i++)
     {
 
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (i == j)
-                sum += matrix[i, j];
+        // for (int j = 0; j < matrix.GetLength(1); j++)
+        // {
+        //     if (i == j)
+                sum += matrix[i, i];
 
-        }
+        
     }
     return sum;
 }
